@@ -31,4 +31,4 @@ The library includes:
 
 ## Disclaimer
 
-This project is part of the curriculum at 42. The code is written according to the school's norms and guidelines. The code is not meant to be used for production code. It is meant to be used for learning and educational purposes only. (Do not copy-paste the code, try to understand it!)
+This project is part of the curriculum at 42. The code is written according to the school's norms and guidelines. The code is not meant to be used for production code. It is meant to be used for learning and educational purposes only. (Do not copy-paste the code!)
