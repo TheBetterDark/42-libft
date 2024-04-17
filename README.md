@@ -23,8 +23,9 @@ The Makefile has the following rules:
 The library includes:
 
 - String manipulation: `ft_atoi`, `ft_itoa`, `ft_split`, `ft_strchr`, `ft_strdup`, `ft_strjoin`, `ft_strlcat`, `ft_strlcpy`, `ft_strlen`, `ft_strmapi`, `ft_strncmp`, `ft_strnstr`, `ft_strrchr`, `ft_strtrim`, `ft_substr`
-- Character checks: `ft_isalnum`, `ft_isalpha`, `ft_isascii`, `ft_isdigit`, `ft_isprint`, `ft_tolower`, `ft_toupper`
-- Memory manipulation: `ft_bzero`, `ft_calloc`, `ft_memccpy`, `ft_memchr`, `ft_memcmp`, `ft_memcpy`, `ft_memmove`, `ft_memset`
+- Character checks: `ft_isalnum`, `ft_isalpha`, `ft_isascii`, `ft_isdigit`, `ft_isprint`
+- Conversion: `ft_tolower`, `ft_toupper`, `ft_tobase`
+- Memory manipulation: `ft_bzero`, `ft_calloc`, `ft_realloc`, `ft_memccpy`, `ft_memchr`, `ft_memcmp`, `ft_memcpy`, `ft_memmove`, `ft_memset`
 - File descriptor output: `ft_putchar_fd`, `ft_putendl_fd`, `ft_putnbr_fd`, `ft_putstr_fd`
 - list functions: `ft_lstadd_back`, `ft_lstadd_front`, `ft_lstclear`, `ft_lstdelone`, `ft_lstiter`, `ft_lstlast`, `ft_lstmap`, `ft_lstnew`, `ft_lstsize`
 
