@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:30:51 by muabdi            #+#    #+#             */
-/*   Updated: 2024/04/14 19:06:01 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/04/17 16:11:47 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,20 +47,22 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_lstadd_back(t_list **lst, t_list *new);
 void				*ft_calloc(size_t nmemb, size_t size);
 void				*ft_memset(void *s, int c, size_t n);
+void				*ft_realloc(void *ptr, size_t size);
 char				*ft_strrchr(const char *str, int c);
 char				*ft_strchr(const char *str, int c);
 char				**ft_split(char const *s, char c);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putstr_fd(char *s, int fd);
+char				*ft_tobase(int num, int base);
 void				ft_putchar_fd(char c, int fd);
 void				ft_bzero(void *s, size_t n);
 void				ft_putnbr_fd(int n, int fd);
 char				*ft_strdup(const char *src);
 size_t				ft_strlen(const char *str);
+t_list				*ft_lstnew(void *content);
 int					ft_atoi(const char *str);
 t_list				*ft_lstlast(t_list *lst);
 int					ft_lstsize(t_list *lst);
-t_list				*ft_lstnew(void *content);
 int					ft_isprint(int arg);
 int					ft_toupper(int ch);
 int					ft_tolower(int ch);
