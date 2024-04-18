@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:21:47 by muabdi            #+#    #+#             */
-/*   Updated: 2024/04/17 13:29:50 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/04/18 16:29:48 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_tobase(int num, int base)
 	}
 	else
 	{
-		tmp = ft_convert_to_base(num / base, base);
+		tmp = ft_tobase(num / base, base);
 		len = ft_strlen(tmp);
 		str = ft_realloc(str, len + 2);
 		ft_strlcpy(str, tmp, len + 1);
