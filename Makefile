@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2024/04/13 06:22:53 by muabdi           ###   ########.fr        #
+#    Updated: 2024/04/22 22:00:15 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ $(SRCDIR)/ft_putnbr_fd.c $(SRCDIR)/ft_putstr_fd.c $(SRCDIR)/ft_split.c $(SRCDIR)
 $(SRCDIR)/ft_strdup.c $(SRCDIR)/ft_striteri.c $(SRCDIR)/ft_strjoin.c $(SRCDIR)/ft_strlcat.c \
 $(SRCDIR)/ft_strlcpy.c $(SRCDIR)/ft_strlen.c $(SRCDIR)/ft_strmapi.c $(SRCDIR)/ft_strncmp.c \
 $(SRCDIR)/ft_strnstr.c $(SRCDIR)/ft_strrchr.c $(SRCDIR)/ft_strtrim.c $(SRCDIR)/ft_substr.c \
-$(SRCDIR)/ft_tolower.c $(SRCDIR)/ft_toupper.c 
+$(SRCDIR)/ft_tolower.c $(SRCDIR)/ft_toupper.c $(SRCDIR)/ft_tobase.c $(SRCDIR)/ft_realloc.c \
+$(SRCDIR)/ft_uputnbr_fd.c
 
 BONUS_SRCS = $(SRCDIR)/ft_lstadd_back.c $(SRCDIR)/ft_lstadd_front.c $(SRCDIR)/ft_lstclear.c \
 $(SRCDIR)/ft_lstdelone.c $(SRCDIR)/ft_lstiter.c $(SRCDIR)/ft_lstlast.c \
