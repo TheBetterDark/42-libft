@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:21:47 by muabdi            #+#    #+#             */
-/*   Updated: 2024/04/18 16:29:48 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/04/22 19:37:32 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,45 @@
 Converts the number to a string representation of the number in the given base.
 The base must be between 2 and 16.
 */
-char	*ft_tobase(int num, int base)
+static int	calculate_length(unsigned long num, int base);
+
+char	*ft_tobase(unsigned long num, int base)
 {
 	const char	*digits = "0123456789abcdef";
-	char		*tmp;
-	int			len;
 	char		*str;
+	int			len;
 
-	str = malloc(2);
-	if (!str || base < 2)
-		return (NULL);
-	if (num < base)
+	if (num == 0)
 	{
-		str[0] = digits[num];
+		str = malloc(2);
+		if (!str)
+			return (NULL);
+		str[0] = '0';
 		str[1] = '\0';
+		return (str);
 	}
-	else
+	len = calculate_length(num, base);
+	str = malloc(len + 1);
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	while (len--)
 	{
-		tmp = ft_tobase(num / base, base);
-		len = ft_strlen(tmp);
-		str = ft_realloc(str, len + 2);
-		ft_strlcpy(str, tmp, len + 1);
 		str[len] = digits[num % base];
-		str[len + 1] = '\0';
-		free(tmp);
+		num /= base;
 	}
 	return (str);
+}
+
+static int	calculate_length(unsigned long num, int base)
+{
+	int	len;
+
+	len = 0;
+	while (num)
+	{
+		num /= base;
+		len++;
+	}
+	return (len);
 }

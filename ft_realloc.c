@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:30:17 by muabdi            #+#    #+#             */
-/*   Updated: 2024/04/17 13:36:35 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/04/22 18:10:13 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,12 @@ void	*ft_realloc(void *ptr, size_t size)
 	void	*new_ptr;
 
 	if (!ptr)
-		return (malloc(size));
+	{
+		new_ptr = malloc(size);
+		if (!new_ptr)
+			return (NULL);
+		return (new_ptr);
+	}
 	if (!size)
 	{
 		free(ptr);
@@ -40,7 +45,10 @@ void	*ft_realloc(void *ptr, size_t size)
 	}
 	new_ptr = malloc(size);
 	if (!new_ptr)
+	{
+		free(ptr);
 		return (NULL);
+	}
 	ft_memcpy(new_ptr, ptr, size);
 	free(ptr);
 	return (new_ptr);
