@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
+#    By: muabdi <muabdi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2024/04/22 22:00:15 by muabdi           ###   ########.fr        #
+#    Updated: 2024/05/24 18:15:44 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
 SRCDIR = ./
-OBJDIR =./build
+OBJDIR =./bin
 
 SRCS = $(SRCDIR)/ft_atoi.c $(SRCDIR)/ft_bzero.c $(SRCDIR)/ft_calloc.c $(SRCDIR)/ft_isalnum.c \
 $(SRCDIR)/ft_isalpha.c $(SRCDIR)/ft_isascii.c $(SRCDIR)/ft_isdigit.c $(SRCDIR)/ft_isprint.c \
@@ -48,9 +48,6 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 ${NAME}: $(OBJS) 
 	@ar rcs $(NAME) $(OBJS)
 
-bonus: $(BONUS_OBJS)
-	@ar rcs $(NAME) $(BONUS_OBJS)
-
 clean:
 	@rm -rf $(OBJDIR)
 
@@ -58,5 +55,8 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
+
+bonus: $(BONUS_OBJS)
+	@ar rcs $(NAME) $(BONUS_OBJS)
 
 .PHONY: all clean fclean re bonus
