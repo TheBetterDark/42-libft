@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
+/*   By: muabdi <muabdi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 19:24:35 by muabdi            #+#    #+#             */
-/*   Updated: 2024/05/14 14:42:45 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/05/24 18:14:24 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ Returns a pointer to the  last  occurrence of the character 'c' in the string s
 */
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	ssize_t	i;
 
-	i = ft_strlen(s);
+	i = (ssize_t)ft_strlen(s);
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)

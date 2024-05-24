@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
+/*   By: muabdi <muabdi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 02:44:08 by muabdi            #+#    #+#             */
-/*   Updated: 2024/04/14 18:06:02 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/05/24 18:14:50 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@ Iterates the list ’lst’ and applies the function ’f’ on the content of e
 */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	unsigned int	i;
-
-	i = 0;
 	if (!lst || !f)
 		return ;
 	f(lst->content);
