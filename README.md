@@ -4,7 +4,7 @@
 
 This is the first project as student in the 42 curriculum. The goal of this project is to create a library of functions that will be used in future projects. The purpose of this project is to understand how to create a library, how to use a library, and understand how the standard C library functions work.
 
-**NOTE**: This library is modified to include some additional functions that are not part of the original project. Please refer to the branch `vogsphere` for the original project.
+**NOTE**: This library is modified to include some additional functions that are not part of the original project. Please refer to the branch [vogsphere](https://github.com/TheBetterDark/42-libft/tree/vogsphere) for the original project.
 
 ## Usage
 
