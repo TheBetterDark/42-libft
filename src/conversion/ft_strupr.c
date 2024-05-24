@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strupr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 21:56:27 by muabdi            #+#    #+#             */
-/*   Updated: 2024/04/19 17:53:08 by muabdi           ###   ########.fr       */
+/*   Created: 2024/05/24 20:33:06 by muabdi            #+#    #+#             */
+/*   Updated: 2024/05/24 22:31:24 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Outputs the character 'c' to the given file descriptor.
-int	ft_putchar_fd(char c, int fd)
+/*
+Convert a string to upper case. The strupr() function will convert a string
+to upper case. Only the lower case alphabetic characters [a .. z] are converted.
+Non-alphabetic characters will not be changed.
+*/
+char	*ft_strupr(char *str)
 {
-	write(fd, &c, 1);
-	return (1);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		str[i] = ft_toupper(str[i]);
+		i++;
+	}
+	return (str);
 }

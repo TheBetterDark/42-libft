@@ -6,18 +6,18 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:21:47 by muabdi            #+#    #+#             */
-/*   Updated: 2024/04/22 19:37:32 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/05/24 22:31:25 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	calculate_length(unsigned long num, int base);
+
 /*
 Converts the number to a string representation of the number in the given base.
 The base must be between 2 and 16.
 */
-static int	calculate_length(unsigned long num, int base);
-
 char	*ft_tobase(unsigned long num, int base)
 {
 	const char	*digits = "0123456789abcdef";

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: muabdi <muabdi@student.42.fr>              +#+  +:+       +#+         #
+#    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2024/05/24 20:13:40 by muabdi           ###   ########.fr        #
+#    Updated: 2024/05/24 22:32:48 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,14 +32,15 @@ CONVERSION_DIR = $(SRC_DIR)/conversion
 MEMORY_DIR = $(SRC_DIR)/memory
 STRING_DIR = $(SRC_DIR)/string
 CHECK_DIR = $(SRC_DIR)/check
-FILE_DIR = $(SRC_DIR)/file
 LIST_DIR = $(SRC_DIR)/list
+IO_DIR = $(SRC_DIR)/io
 
 CONVERSION_SRCS = $(CONVERSION_DIR)/ft_atoi.c \
 $(CONVERSION_DIR)/ft_itoa.c \
 $(CONVERSION_DIR)/ft_tobase.c \
 $(CONVERSION_DIR)/ft_tolower.c \
-$(CONVERSION_DIR)/ft_toupper.c
+$(CONVERSION_DIR)/ft_toupper.c \
+$(CONVERSION_DIR)/ft_strupr.c
 
 MEMORY_SRCS = $(MEMORY_DIR)/ft_bzero.c \
 $(MEMORY_DIR)/ft_calloc.c \
@@ -71,12 +72,6 @@ $(CHECK_DIR)/ft_isascii.c \
 $(CHECK_DIR)/ft_isdigit.c \
 $(CHECK_DIR)/ft_isprint.c \
 
-FILE_SRCS = $(FILE_DIR)/ft_putchar_fd.c \
-$(FILE_DIR)/ft_putendl_fd.c \
-$(FILE_DIR)/ft_putnbr_fd.c \
-$(FILE_DIR)/ft_putstr_fd.c \
-$(FILE_DIR)/ft_uputnbr_fd.c
-
 LIST_SRCS = $(LIST_DIR)/ft_lstadd_back.c \
 $(LIST_DIR)/ft_lstadd_front.c \
 $(LIST_DIR)/ft_lstclear.c \
@@ -87,7 +82,15 @@ $(LIST_DIR)/ft_lstmap.c \
 $(LIST_DIR)/ft_lstnew.c \
 $(LIST_DIR)/ft_lstsize.c
 
-SRCS = $(CONVERSION_SRCS) $(MEMORY_SRCS) $(STRING_SRCS) $(CHECK_SRCS) $(FILE_SRCS) $(LIST_SRCS)
+IO_SRCS = $(IO_DIR)/ft_putchar_fd.c \
+$(IO_DIR)/ft_putendl_fd.c \
+$(IO_DIR)/ft_putnbr_fd.c \
+$(IO_DIR)/ft_putstr_fd.c \
+$(IO_DIR)/ft_putunbr_fd.c\
+$(IO_DIR)/get_next_line.c \
+$(IO_DIR)/ft_printf.c
+
+SRCS = $(CONVERSION_SRCS) $(MEMORY_SRCS) $(STRING_SRCS) $(CHECK_SRCS) $(IO_SRCS) $(LIST_SRCS)
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 all: $(NAME) $(OBJ_DIR)

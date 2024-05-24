@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 01:30:33 by muabdi            #+#    #+#             */
-/*   Updated: 2024/05/24 22:31:56 by muabdi           ###   ########.fr       */
+/*   Created: 2024/04/12 21:56:27 by muabdi            #+#    #+#             */
+/*   Updated: 2024/05/24 22:31:35 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Returns the last node of the list.
-t_list	*ft_lstlast(t_list *lst)
+// Outputs the character 'c' to the given file descriptor.
+int	ft_putchar_fd(char c, int fd)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	write(fd, &c, 1);
+	return (1);
 }
