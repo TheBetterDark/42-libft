@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
+/*   By: muabdi <muabdi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:51:43 by muabdi            #+#    #+#             */
-/*   Updated: 2024/04/14 18:12:13 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/05/24 03:30:01 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-scans the initial n bytes of the memory area pointed to by s
+Scans the initial n bytes of the memory area pointed to by s
 for the first instance of c. Both c and the bytes of the memory area  pointed  to
 by s are interpreted as unsigned char.
 */

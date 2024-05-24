@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 14:12:46 by muabdi            #+#    #+#             */
-/*   Updated: 2024/04/14 18:24:42 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/05/14 14:39:20 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strdup(const char *s)
 {
 	char	*dst;
 
+	if (!s)
+		return (NULL);
 	dst = malloc(ft_strlen(s) + 1);
 	if (dst == NULL)
 		return (NULL);
