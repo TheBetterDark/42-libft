@@ -6,57 +6,120 @@
 #    By: muabdi <muabdi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2024/05/24 18:15:44 by muabdi           ###   ########.fr        #
+#    Updated: 2024/05/24 20:13:40 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
+INCLUDES = ./includes
+LIBS = ./modules
+
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
-SRCDIR = ./
-OBJDIR =./bin
+INCLUDEFLAGS = -I$(INCLUDES)
 
-SRCS = $(SRCDIR)/ft_atoi.c $(SRCDIR)/ft_bzero.c $(SRCDIR)/ft_calloc.c $(SRCDIR)/ft_isalnum.c \
-$(SRCDIR)/ft_isalpha.c $(SRCDIR)/ft_isascii.c $(SRCDIR)/ft_isdigit.c $(SRCDIR)/ft_isprint.c \
-$(SRCDIR)/ft_itoa.c $(SRCDIR)/ft_memchr.c $(SRCDIR)/ft_memcmp.c $(SRCDIR)/ft_memcpy.c \
-$(SRCDIR)/ft_memmove.c $(SRCDIR)/ft_memset.c $(SRCDIR)/ft_putchar_fd.c $(SRCDIR)/ft_putendl_fd.c \
-$(SRCDIR)/ft_putnbr_fd.c $(SRCDIR)/ft_putstr_fd.c $(SRCDIR)/ft_split.c $(SRCDIR)/ft_strchr.c \
-$(SRCDIR)/ft_strdup.c $(SRCDIR)/ft_striteri.c $(SRCDIR)/ft_strjoin.c $(SRCDIR)/ft_strlcat.c \
-$(SRCDIR)/ft_strlcpy.c $(SRCDIR)/ft_strlen.c $(SRCDIR)/ft_strmapi.c $(SRCDIR)/ft_strncmp.c \
-$(SRCDIR)/ft_strnstr.c $(SRCDIR)/ft_strrchr.c $(SRCDIR)/ft_strtrim.c $(SRCDIR)/ft_substr.c \
-$(SRCDIR)/ft_tolower.c $(SRCDIR)/ft_toupper.c $(SRCDIR)/ft_tobase.c $(SRCDIR)/ft_realloc.c \
-$(SRCDIR)/ft_uputnbr_fd.c
+RED = \033[0;31m
+GREEN = \033[0;32m
+YELLOW = \033[0;33m
+NC = \033[0m
 
-BONUS_SRCS = $(SRCDIR)/ft_lstadd_back.c $(SRCDIR)/ft_lstadd_front.c $(SRCDIR)/ft_lstclear.c \
-$(SRCDIR)/ft_lstdelone.c $(SRCDIR)/ft_lstiter.c $(SRCDIR)/ft_lstlast.c \
-$(SRCDIR)/ft_lstmap.c $(SRCDIR)/ft_lstnew.c $(SRCDIR)/ft_lstsize.c
+SRC_DIR = ./src
+OBJ_DIR = ./bin
 
-OBJS = $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
-BONUS_OBJS = $(BONUS_SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
+CONVERSION_DIR = $(SRC_DIR)/conversion
+MEMORY_DIR = $(SRC_DIR)/memory
+STRING_DIR = $(SRC_DIR)/string
+CHECK_DIR = $(SRC_DIR)/check
+FILE_DIR = $(SRC_DIR)/file
+LIST_DIR = $(SRC_DIR)/list
 
-all: $(OBJDIR) $(NAME)
+CONVERSION_SRCS = $(CONVERSION_DIR)/ft_atoi.c \
+$(CONVERSION_DIR)/ft_itoa.c \
+$(CONVERSION_DIR)/ft_tobase.c \
+$(CONVERSION_DIR)/ft_tolower.c \
+$(CONVERSION_DIR)/ft_toupper.c
 
-$(OBJDIR):
-	@mkdir -p $(OBJDIR)
+MEMORY_SRCS = $(MEMORY_DIR)/ft_bzero.c \
+$(MEMORY_DIR)/ft_calloc.c \
+$(MEMORY_DIR)/ft_memchr.c \
+$(MEMORY_DIR)/ft_memcmp.c \
+$(MEMORY_DIR)/ft_memcpy.c \
+$(MEMORY_DIR)/ft_memmove.c \
+$(MEMORY_DIR)/ft_memset.c \
+$(MEMORY_DIR)/ft_realloc.c
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.c
+STRING_SRCS = $(STRING_DIR)/ft_strchr.c \
+$(STRING_DIR)/ft_strdup.c \
+$(STRING_DIR)/ft_striteri.c \
+$(STRING_DIR)/ft_strjoin.c \
+$(STRING_DIR)/ft_strlcat.c \
+$(STRING_DIR)/ft_strlcpy.c \
+$(STRING_DIR)/ft_strlen.c \
+$(STRING_DIR)/ft_strmapi.c \
+$(STRING_DIR)/ft_strncmp.c \
+$(STRING_DIR)/ft_strnstr.c \
+$(STRING_DIR)/ft_strrchr.c \
+$(STRING_DIR)/ft_strtrim.c \
+$(STRING_DIR)/ft_substr.c \
+$(STRING_DIR)/ft_split.c
+
+CHECK_SRCS = $(CHECK_DIR)/ft_isalnum.c \
+$(CHECK_DIR)/ft_isalpha.c \
+$(CHECK_DIR)/ft_isascii.c \
+$(CHECK_DIR)/ft_isdigit.c \
+$(CHECK_DIR)/ft_isprint.c \
+
+FILE_SRCS = $(FILE_DIR)/ft_putchar_fd.c \
+$(FILE_DIR)/ft_putendl_fd.c \
+$(FILE_DIR)/ft_putnbr_fd.c \
+$(FILE_DIR)/ft_putstr_fd.c \
+$(FILE_DIR)/ft_uputnbr_fd.c
+
+LIST_SRCS = $(LIST_DIR)/ft_lstadd_back.c \
+$(LIST_DIR)/ft_lstadd_front.c \
+$(LIST_DIR)/ft_lstclear.c \
+$(LIST_DIR)/ft_lstdelone.c \
+$(LIST_DIR)/ft_lstiter.c \
+$(LIST_DIR)/ft_lstlast.c \
+$(LIST_DIR)/ft_lstmap.c \
+$(LIST_DIR)/ft_lstnew.c \
+$(LIST_DIR)/ft_lstsize.c
+
+SRCS = $(CONVERSION_SRCS) $(MEMORY_SRCS) $(STRING_SRCS) $(CHECK_SRCS) $(FILE_SRCS) $(LIST_SRCS)
+OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+
+all: $(NAME) $(OBJ_DIR)
+
+$(OBJ_DIR):
+	@echo "${YELLOW}Creating object directory $(OBJ_DIR)...${NC}"
+	@mkdir -p $(OBJ_DIR)
+	@echo "${GREEN}Object directory $(OBJ_DIR) created.${NC}"
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c $< -o $@
 
 ${NAME}: $(OBJS) 
+	@echo "${YELLOW}Creating archive '$(NAME)'...${NC}"
 	@ar rcs $(NAME) $(OBJS)
+	@echo "${GREEN}Archive '$(NAME)' created.${NC}" 
 
 clean:
-	@rm -rf $(OBJDIR)
+	@echo "${YELLOW}Starting target 'clean'...${NC}"
+	@echo "${YELLOW}Cleaning object files...${NC}"
+	@rm -rf $(OBJ_DIR)
+	@echo "${GREEN}Object files cleaned.${NC}"
+	@echo "${GREEN}Target 'clean' completed.${NC}"
 
 fclean: clean
+	@echo "${YELLOW}Cleaning archive $(NAME)...${NC}"
 	@rm -f $(NAME)
+	@echo "${GREEN}Archive $(NAME) cleaned.${NC}"
+	@echo "${GREEN}Target 'fclean' completed.${NC}"
 
 re: fclean all
+	@echo "${GREEN}Target 're' completed.${NC}"
 
-bonus: $(BONUS_OBJS)
-	@ar rcs $(NAME) $(BONUS_OBJS)
-
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re

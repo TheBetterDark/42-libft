@@ -1,14 +1,20 @@
-# Compiled files
+# System files
+.DS_Store
+
+# Object files
 *.o
-*.a
-*.so
 
 # Executables files
 *.out
 *.exe
 
+# Libaries files
+*.a
+
 # Temp files
 *.swp
+
+# Environment files
 .vscode
-build
 test
+bin
