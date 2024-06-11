@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:30:51 by muabdi            #+#    #+#             */
-/*   Updated: 2024/05/24 22:32:58 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/06/11 23:28:37 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ size_t				ft_strlcat(char *dest, const char *src, size_t size);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strtok(char *str, const char *delim);
 char				*ft_strrchr(const char *str, int c);
 char				*ft_strchr(const char *str, int c);
 char				**ft_split(char const *s, char c);
