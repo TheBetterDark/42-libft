@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:30:51 by muabdi            #+#    #+#             */
-/*   Updated: 2024/06/12 18:39:38 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/06/12 21:21:44 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void				*ft_memmove(void *s1, const void *s2, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_calloc(size_t nmemb, size_t size);
 void				*ft_memset(void *s, int c, size_t n);
-void				*ft_realloc(void *ptr, size_t size);
+void				*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 void				ft_bzero(void *s, size_t n);
 
 char				*get_next_line(int fd);
