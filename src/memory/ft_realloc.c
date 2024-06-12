@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:30:17 by muabdi            #+#    #+#             */
-/*   Updated: 2024/05/24 22:32:18 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/06/12 21:16:04 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,29 +26,25 @@ Unless ptr is NULL,it must have been returned by an earlier call to
 ft_malloc(), ft_calloc(), or ft_realloc(). If the area pointed to was moved,
 a	free(ptr) is done.
 */
-void	*ft_realloc(void *ptr, size_t size)
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
 {
 	void	*new_ptr;
 
 	if (!ptr)
 	{
-		new_ptr = malloc(size);
+		new_ptr = malloc(new_size);
 		if (!new_ptr)
 			return (NULL);
 		return (new_ptr);
 	}
-	if (!size)
-	{
-		free(ptr);
-		return (NULL);
-	}
-	new_ptr = malloc(size);
+	if (!new_size)
+		new_ptr = malloc(old_size);
 	if (!new_ptr)
-	{
-		free(ptr);
-		return (NULL);
-	}
-	ft_memcpy(new_ptr, ptr, size);
+		return (free(ptr), NULL);
+	if (old_size < new_size)
+		ft_memcpy(new_ptr, ptr, old_size);
+	else
+		ft_memcpy(new_ptr, ptr, new_size);
 	free(ptr);
 	return (new_ptr);
 }
