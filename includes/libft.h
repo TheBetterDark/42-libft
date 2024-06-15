@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:30:51 by muabdi            #+#    #+#             */
-/*   Updated: 2024/06/12 21:21:44 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/06/15 23:51:10 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,9 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
-void				ft_lstadd_front(t_list **lst, t_list *new);
+void				ft_lstadd_front(t_list **lst, t_list *new_list);
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-void				ft_lstadd_back(t_list **lst, t_list *new);
+void				ft_lstadd_back(t_list **lst, t_list *new_list);
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstlast(t_list *lst);
 int					ft_lstsize(t_list *lst);

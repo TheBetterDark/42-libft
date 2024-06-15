@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 // Writes n zeroed bytes to the string s. If n is zero, bzero() does nothing.
 void	ft_bzero(void *s, size_t n)

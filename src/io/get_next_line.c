@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 static char	*get_next_line_and_update(char **file_content_ptr);
 static char	*append_read(char *file_content, char *buffer);

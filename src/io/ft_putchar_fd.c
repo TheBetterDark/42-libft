@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 // Outputs the character 'c' to the given file descriptor.
 int	ft_putchar_fd(char c, int fd)

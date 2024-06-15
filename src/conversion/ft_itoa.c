@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 static char	*ft_convert_num_to_str(int len, unsigned int num);
 static int	ft_count_digits(int n);

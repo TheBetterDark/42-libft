@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 static int	ft_print_hex(unsigned int n, bool uppercase);
 static int	ft_print_pointer(void *ptr);

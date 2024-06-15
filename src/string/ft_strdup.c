@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 // Returns a pointer to a duplicate of the string s.
 char	*ft_strdup(const char *s)
