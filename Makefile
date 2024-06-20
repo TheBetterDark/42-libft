@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2024/05/24 22:32:48 by muabdi           ###   ########.fr        #
+#    Updated: 2024/06/20 22:58:06 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,8 @@ $(STRING_DIR)/ft_strnstr.c \
 $(STRING_DIR)/ft_strrchr.c \
 $(STRING_DIR)/ft_strtrim.c \
 $(STRING_DIR)/ft_substr.c \
-$(STRING_DIR)/ft_split.c
+$(STRING_DIR)/ft_split.c \
+$(STRING_DIR)/ft_strtok.c
 
 CHECK_SRCS = $(CHECK_DIR)/ft_isalnum.c \
 $(CHECK_DIR)/ft_isalpha.c \
