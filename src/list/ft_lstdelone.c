@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 01:46:42 by muabdi            #+#    #+#             */
-/*   Updated: 2024/05/28 22:15:37 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/07/09 19:05:36 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ The memory of ’next’ must not be freed.
 */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!lst || !lst->content)
+	if (!lst)
 		return ;
-	del(lst->content);
+	if (lst->content && del != NULL)
+		del(lst->content);
 	free(lst);
 }
