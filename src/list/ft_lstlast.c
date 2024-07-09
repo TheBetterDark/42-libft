@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 01:30:33 by muabdi            #+#    #+#             */
-/*   Updated: 2024/05/24 22:31:56 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/07/09 15:43:51 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);
-	while (lst->next)
+	while (lst->next != lst)
 		lst = lst->next;
 	return (lst);
 }

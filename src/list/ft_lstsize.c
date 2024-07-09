@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 01:30:33 by muabdi            #+#    #+#             */
-/*   Updated: 2024/05/24 22:32:01 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/07/09 15:51:14 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 // Counts the number of nodes in a list.
 int	ft_lstsize(t_list *lst)
 {
-	int	count;
+	t_list	*head;
+	int		count;
 
 	count = 0;
-	while (lst)
+	head = lst;
+	while (lst != head)
 	{
 		lst = lst->next;
 		count++;

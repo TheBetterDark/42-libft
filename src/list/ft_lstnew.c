@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 01:21:29 by muabdi            #+#    #+#             */
-/*   Updated: 2024/05/24 22:32:00 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/07/09 15:50:30 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	new->content = content;
 	new->next = NULL;
+	new->prev = NULL;
 	return (new);
 }
