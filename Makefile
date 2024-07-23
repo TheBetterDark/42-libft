@@ -40,7 +40,8 @@ $(CONVERSION_DIR)/ft_itoa.c \
 $(CONVERSION_DIR)/ft_tobase.c \
 $(CONVERSION_DIR)/ft_tolower.c \
 $(CONVERSION_DIR)/ft_toupper.c \
-$(CONVERSION_DIR)/ft_strupr.c
+$(CONVERSION_DIR)/ft_strupr.c \
+$(CONVERSION_DIR)/ft_atol.c
 
 MEMORY_SRCS = $(MEMORY_DIR)/ft_bzero.c \
 $(MEMORY_DIR)/ft_calloc.c \

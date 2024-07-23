@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 01:42:16 by muabdi            #+#    #+#             */
-/*   Updated: 2024/07/09 15:29:04 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/07/11 17:39:28 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new_list)
 		return ;
 	}
 	last = *lst;
-	while (last->next)
+	while (last->next != *lst)
 		last = last->next;
 	last->prev = last->next;
 	last->next = new_list;
