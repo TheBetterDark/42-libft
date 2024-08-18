@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2024/06/20 22:58:06 by muabdi           ###   ########.fr        #
+#    Updated: 2024/08/18 23:09:37 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ CONVERSION_DIR = $(SRC_DIR)/conversion
 MEMORY_DIR = $(SRC_DIR)/memory
 STRING_DIR = $(SRC_DIR)/string
 CHECK_DIR = $(SRC_DIR)/check
+MATH_DIR = $(SRC_DIR)/math
 LIST_DIR = $(SRC_DIR)/list
 IO_DIR = $(SRC_DIR)/io
 
@@ -65,14 +66,17 @@ $(STRING_DIR)/ft_strnstr.c \
 $(STRING_DIR)/ft_strrchr.c \
 $(STRING_DIR)/ft_strtrim.c \
 $(STRING_DIR)/ft_substr.c \
-$(STRING_DIR)/ft_split.c \
-$(STRING_DIR)/ft_strtok.c
 
-CHECK_SRCS = $(CHECK_DIR)/ft_isalnum.c \
-$(CHECK_DIR)/ft_isalpha.c \
-$(CHECK_DIR)/ft_isascii.c \
-$(CHECK_DIR)/ft_isdigit.c \
-$(CHECK_DIR)/ft_isprint.c \
+MATH_SRCS = $(MATH_DIR)/ft_abs.c \
+$(MATH_DIR)/ft_max.c \
+$(MATH_DIR)/ft_min.c \
+$(MATH_DIR)/ft_pow.c \
+$(MATH_DIR)/ft_sqrt.c \
+$(MATH_DIR)/ft_clamp.c \
+$(MATH_DIR)/ft_ceil.c \
+$(MATH_DIR)/ft_floor.c \
+$(MATH_DIR)/ft_round.c \
+$(MATH_DIR)/ft_trunc.c \
 
 LIST_SRCS = $(LIST_DIR)/ft_lstadd_back.c \
 $(LIST_DIR)/ft_lstadd_front.c \
