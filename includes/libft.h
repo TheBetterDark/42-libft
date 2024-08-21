@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:30:51 by muabdi            #+#    #+#             */
-/*   Updated: 2024/08/18 23:07:12 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/08/21 21:22:29 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@
 // Define maximum file descriptor
 # ifndef MAX_FD
 #  define MAX_FD 4096
+# endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
 # endif
 
 // String manipulation functions

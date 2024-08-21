@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 01:21:29 by muabdi            #+#    #+#             */
-/*   Updated: 2024/08/21 21:23:08 by muabdi           ###   ########.fr       */
+/*   Created: 2024/08/18 22:55:57 by muabdi            #+#    #+#             */
+/*   Updated: 2024/08/18 22:56:22 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
-/*
-Allocates (with malloc(3)) and returns a new node.
-The member variable ’content’ is initialized with
-the value of the parameter ’content’. The variable
-’next’ is initialized to NULL.
-*/
-t_list	*ft_lstnew(void *content)
+// Reverses the string s in place.
+char	*ft_strrev(char *str)
 {
-	t_list	*new;
+	size_t	len;
+	size_t	i;
+	char	temp;
 
-	new = malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->next = new;
-	return (new);
+	len = ft_strlen(str);
+	i = 0;
+	while (i < len / 2)
+	{
+		temp = str[i];
+		str[i] = str[len - i - 1];
+		str[len - i - 1] = temp;
+		i++;
+	}
+	return (str);
 }

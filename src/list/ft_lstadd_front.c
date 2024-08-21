@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 01:22:54 by muabdi            #+#    #+#             */
-/*   Updated: 2024/07/09 15:37:10 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/08/21 21:22:53 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ void	ft_lstadd_front(t_list **lst, t_list *new_list)
 	if (!lst || !new_list)
 		return ;
 	new_list->next = *lst;
-	new_list->prev = last;
 	*lst = new_list;
 }

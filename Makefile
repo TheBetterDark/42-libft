@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2024/08/18 23:09:37 by muabdi           ###   ########.fr        #
+#    Updated: 2024/08/21 21:12:13 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,8 @@ $(MEMORY_DIR)/ft_memcmp.c \
 $(MEMORY_DIR)/ft_memcpy.c \
 $(MEMORY_DIR)/ft_memmove.c \
 $(MEMORY_DIR)/ft_memset.c \
-$(MEMORY_DIR)/ft_realloc.c
+$(MEMORY_DIR)/ft_realloc.c \
+$(MEMORY_DIR)/ft_memdup.c
 
 STRING_SRCS = $(STRING_DIR)/ft_strchr.c \
 $(STRING_DIR)/ft_strdup.c \
@@ -66,6 +67,8 @@ $(STRING_DIR)/ft_strnstr.c \
 $(STRING_DIR)/ft_strrchr.c \
 $(STRING_DIR)/ft_strtrim.c \
 $(STRING_DIR)/ft_substr.c \
+$(STRING_DIR)/ft_strrev.c \
+$(STRING_DIR)/ft_strstr.c
 
 MATH_SRCS = $(MATH_DIR)/ft_abs.c \
 $(MATH_DIR)/ft_max.c \
@@ -76,7 +79,7 @@ $(MATH_DIR)/ft_clamp.c \
 $(MATH_DIR)/ft_ceil.c \
 $(MATH_DIR)/ft_floor.c \
 $(MATH_DIR)/ft_round.c \
-$(MATH_DIR)/ft_trunc.c \
+$(MATH_DIR)/ft_trunc.c
 
 LIST_SRCS = $(LIST_DIR)/ft_lstadd_back.c \
 $(LIST_DIR)/ft_lstadd_front.c \

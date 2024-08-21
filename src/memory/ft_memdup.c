@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_memdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 01:21:29 by muabdi            #+#    #+#             */
-/*   Updated: 2024/08/21 21:23:08 by muabdi           ###   ########.fr       */
+/*   Created: 2024/08/18 23:02:42 by muabdi            #+#    #+#             */
+/*   Updated: 2024/08/18 23:03:06 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 /*
-Allocates (with malloc(3)) and returns a new node.
-The member variable ’content’ is initialized with
-the value of the parameter ’content’. The variable
-’next’ is initialized to NULL.
+Duplicates the memory pointed to by src, returning a pointer to the new memory.
 */
-t_list	*ft_lstnew(void *content)
+void	*ft_memdup(const void *src, size_t n)
 {
-	t_list	*new;
+	void	*dst;
 
-	new = malloc(sizeof(t_list));
-	if (!new)
+	dst = malloc(n);
+	if (!dst)
 		return (NULL);
-	new->content = content;
-	new->next = new;
-	return (new);
+	return (ft_memcpy(dst, src, n));
 }
