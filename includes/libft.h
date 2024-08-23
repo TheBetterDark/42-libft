@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:30:51 by muabdi            #+#    #+#             */
-/*   Updated: 2024/08/21 21:22:29 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/08/23 16:24:00 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ int					ft_putstr_fd(char *s, int fd);
 int					ft_putunbr_fd(int n, int fd);
 int					ft_putchar_fd(char c, int fd);
 int					ft_putnbr_fd(int n, int fd);
+char				*get_next_line(int fd);
 
 // Math functions
 double				ft_clamp(double value, double min, double max);
