@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:30:51 by muabdi            #+#    #+#             */
-/*   Updated: 2024/08/23 16:24:00 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/08/24 19:08:28 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,13 @@ void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
 
 // I/O functions
+int					ft_snprintf(char *buffer, size_t size, const char *format,
+						...);
+int					ft_putendl_buf(char *buffer, size_t size, const char *str);
+int					ft_putstr_buf(char *buffer, size_t size, const char *str);
+int					ft_putunbr_buf(char *buffer, size_t size, unsigned int n);
+int					ft_putchar_buf(char *buffer, size_t size, char c);
+int					ft_putnbr_buf(char *buffer, size_t size, int n);
 int					ft_printf(const char *format, ...);
 int					ft_putendl_fd(char *s, int fd);
 int					ft_putstr_fd(char *s, int fd);

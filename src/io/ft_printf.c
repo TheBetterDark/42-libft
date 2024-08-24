@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:22:39 by muabdi            #+#    #+#             */
-/*   Updated: 2024/05/24 22:31:32 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/08/24 18:30:09 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ static int	ft_print_pointer(void *ptr);
 static int	ft_parse(const char format, va_list args);
 
 /*
-Takes a format string and a variable number of arguments, formats them as per the
+Takes a format string and a variable number of arguments,
+	formats them as per the
 format string and writes the result to the standard output.
 */
 int	ft_printf(const char *format, ...)

@@ -6,7 +6,7 @@
 #    By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 23:59:26 by muabdi            #+#    #+#              #
-#    Updated: 2024/08/21 21:12:13 by muabdi           ###   ########.fr        #
+#    Updated: 2024/08/24 19:14:17 by muabdi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,7 +97,13 @@ $(IO_DIR)/ft_putnbr_fd.c \
 $(IO_DIR)/ft_putstr_fd.c \
 $(IO_DIR)/ft_putunbr_fd.c\
 $(IO_DIR)/get_next_line.c \
-$(IO_DIR)/ft_printf.c
+$(IO_DIR)/ft_printf.c \
+$(IO_DIR)/ft_snprintf.c \
+$(IO_DIR)/ft_putchar_buf.c \
+$(IO_DIR)/ft_putstr_buf.c \
+$(IO_DIR)/ft_putnbr_buf.c \
+$(IO_DIR)/ft_putunbr_buf.c \
+$(IO_DIR)/ft_putendl_buf.c
 
 SRCS = $(CONVERSION_SRCS) $(MEMORY_SRCS) $(STRING_SRCS) $(CHECK_SRCS) $(IO_SRCS) $(LIST_SRCS)
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
@@ -111,7 +117,9 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(@D)
+	@echo "${YELLOW}Compiling $<...${NC}"
 	@$(CC) $(CFLAGS) $(INCLUDEFLAGS) -c $< -o $@
+	@echo "${GREEN}Compiled $<.${NC}"
 
 ${NAME}: $(OBJS) 
 	@echo "${YELLOW}Creating archive '$(NAME)'...${NC}"
@@ -123,15 +131,12 @@ clean:
 	@echo "${YELLOW}Cleaning object files...${NC}"
 	@rm -rf $(OBJ_DIR)
 	@echo "${GREEN}Object files cleaned.${NC}"
-	@echo "${GREEN}Target 'clean' completed.${NC}"
 
 fclean: clean
 	@echo "${YELLOW}Cleaning archive $(NAME)...${NC}"
 	@rm -f $(NAME)
 	@echo "${GREEN}Archive $(NAME) cleaned.${NC}"
-	@echo "${GREEN}Target 'fclean' completed.${NC}"
 
 re: fclean all
-	@echo "${GREEN}Target 're' completed.${NC}"
 
 .PHONY: all clean fclean re
