@@ -6,7 +6,7 @@
 /*   By: muabdi <muabdi@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:22:39 by muabdi            #+#    #+#             */
-/*   Updated: 2024/08/24 19:09:31 by muabdi           ###   ########.fr       */
+/*   Updated: 2024/08/24 19:39:16 by muabdi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static int	ft_print_pointer(char *buffer, size_t size, void *ptr);
 /*
 Takes a format string and a variable number of arguments, formats them as
 per the format string and writes the result to the buffer.
+
+NOTE: The buffer only null-terminates if the buffer is large enough to hold it.
 */
 int	ft_snprintf(char *buffer, size_t size, const char *format, ...)
 {
@@ -44,6 +46,8 @@ int	ft_snprintf(char *buffer, size_t size, const char *format, ...)
 		pos += ret;
 		format++;
 	}
+	if (pos < size)
+		buffer[pos] = '\0';
 	va_end(args);
 	return (len);
 }
